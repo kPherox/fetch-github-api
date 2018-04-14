@@ -1,0 +1,22 @@
+{
+  "name": "fetch-github-api",
+  "version": "0.1.0",
+  "description": "Fetch json of all pages for GitHub api",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kPherox/fetch-github-api.git"
+  },
+  "keywords": [
+    "github",
+    "api",
+    "fetch",
+    "json"
+  ],
+  "author": "kPherox <admin@mail.kr-kp.com> (https://www.kr-kp.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kPherox/fetch-github-api/issues"
+  },
+  "homepage": "https://github.com/kPherox/fetch-github-api#readme"
+}
