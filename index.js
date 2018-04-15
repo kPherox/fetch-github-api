@@ -14,6 +14,7 @@ class FetchGitHubApi {
         let params = this._params;
         if (this.perPage)
             params['per_page'] = this.perPage;
+
         return params;
     }
 
@@ -22,7 +23,7 @@ class FetchGitHubApi {
     }
 
     fetchJson() {
-        return this.fetchApi(this.params)
+        return this.fetchApi()
             .then(async res => {
                 let linkHeader = this.linkParser(res.headers.get('Link'))
                   , hasLast = linkHeader ? linkHeader.hasOwnProperty('last') : false
@@ -31,28 +32,35 @@ class FetchGitHubApi {
                 if (hasLast) {
                     let nextPage = linkHeader['next']['page']
                       , lastPage = linkHeader['last']['page']
-                      , promises = []
-                      , params = this.params;
+                      , promises = [];
 
                     for (let i = nextPage; i <= lastPage; i++) {
                         if (this.maxPage && i > this.maxPage)
                             break;
-                        params['page'] = i;
-                        promises.push(this.fetchApi(params).then(res => res.json()));
+
+                        promises.push(this.fetchApi(i).then(res => res.json()));
                     }
+
                     let results = await Promise.all(promises);
                     jsonData = jsonData.then(json => {
                         for (let result of results) {
                             json.push(...result);
                         }
+
                         return json;
                     });
                 }
+
                 return jsonData;
             });
     }
 
-    fetchApi(params = {}) {
+    fetchApi(pageNumber = 0) {
+        let params = this.params;
+
+        if (pageNumber)
+            params['page'] = pageNumber;
+
         return fetch(this.apiUrl(params)).then(this.responseCheck);
     }
 
@@ -65,7 +73,8 @@ class FetchGitHubApi {
 
     apiUrl(params = {}) {
         let url = new URL('https://api.github.com' + this.endpoint);
-        Object.keys(params).forEach(key => url.searchParams.append(key, this.params[key]))
+        Object.keys(params).forEach(key => url.searchParams.append(key, this.params[key]));
+
         return url;
     }
 
