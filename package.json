@@ -1,6 +1,7 @@
 {
   "name": "fetch-github-api",
   "version": "0.1.0",
+  "engines": { "node": ">= 8.0.0" },
   "description": "Fetch json of all pages for GitHub api",
   "main": "lib/index.js",
   "repository": {

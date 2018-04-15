@@ -14,7 +14,7 @@
 [travis-ci]: https://travis-ci.org/kPherox/fetch-github-api
 [codeclimate-maintainability]: https://codeclimate.com/github/kPherox/fetch-github-api/maintainability
 
-[license-badge]: https://img.shields.io/github/license/kPherox/fetch-github-api.svg
+[license-badge]: https://img.shields.io/npm/l/fetch-github-api.svg
 [npm-version-badge]: https://img.shields.io/npm/v/fetch-github-api.svg
 [code-size-badge]: https://img.shields.io/github/languages/code-size/kPherox/fetch-github-api.svg
 [david-dm-badge]: https://img.shields.io/david/kPherox/fetch-github-api.svg
