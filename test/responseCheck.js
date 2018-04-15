@@ -26,7 +26,8 @@ test('Check http error', async t => {
     await fetchGitHubApi.fetchApi().then(res => {
         t.not(res.status, 200);
     }).catch(err => {
-        t.is(err.message, 'Unauthorized')
+        let errMsg = JSON.parse(err.message);
+        t.is(errMsg['statusText'], 'Unauthorized')
     });
 })
 
