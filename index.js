@@ -21,7 +21,7 @@ class FetchGitHubApi {
     }
 
     fetchJson() {
-        return fetchApi(this.params)
+        return this.fetchApi(this.params)
             .then(async function(res) {
                 let linkHeader = this.linkParser(res.headers.get('Link'))
                   , hasLast = linkHeader ? linkHeader.hasOwnProperty('last') : false
@@ -37,7 +37,7 @@ class FetchGitHubApi {
                         if (i > this.maxPage)
                             break;
                         params['page'] = i;
-                        promises.push(fetchApi(params).then(res => res.json()));
+                        promises.push(this.fetchApi(params).then(res => res.json()));
                     }
                     let results = await Promise.all(promises);
                     jsonData = jsonData.then(json => {
