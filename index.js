@@ -2,7 +2,7 @@
 
 class FetchGitHubApi {
 
-    constructor(endpoint, params = {}, max = 0, per = 30) {
+    constructor(endpoint, params = {}, max = 0, per = 0) {
         this.endpoint = endpoint;
         this.maxPage = max;
         this.perPage = per;
@@ -12,7 +12,8 @@ class FetchGitHubApi {
 
     get params() {
         let params = this._params;
-        params['per_page'] = this.perPage;
+        if (this.perPage)
+            params['per_page'] = this.perPage;
         return params;
     }
 
@@ -22,7 +23,7 @@ class FetchGitHubApi {
 
     fetchJson() {
         return this.fetchApi(this.params)
-            .then(async function(res) {
+            .then(async res => {
                 let linkHeader = this.linkParser(res.headers.get('Link'))
                   , hasLast = linkHeader ? linkHeader.hasOwnProperty('last') : false
                   , jsonData = res.json();
@@ -33,8 +34,8 @@ class FetchGitHubApi {
                       , promises = []
                       , params = this.params;
 
-                    for (i = nextPage; i <= lastPage; i++) {
-                        if (i > this.maxPage)
+                    for (let i = nextPage; i <= lastPage; i++) {
+                        if (this.maxPage && i > this.maxPage)
                             break;
                         params['page'] = i;
                         promises.push(this.fetchApi(params).then(res => res.json()));
