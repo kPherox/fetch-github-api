@@ -2,7 +2,7 @@
   "name": "fetch-github-api",
   "version": "0.1.0",
   "description": "Fetch json of all pages for GitHub api",
-  "main": "index.js",
+  "main": "lib/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kPherox/fetch-github-api.git"
