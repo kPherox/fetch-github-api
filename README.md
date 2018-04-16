@@ -51,10 +51,11 @@ let json = await fetchGitHubApi.fetchJson();
 
 ## Options
 constructor arguments.
+
 | name | type | desc |
 |:----:|:----:|:-----|
 |endpoint|String|API endpoint.|
-|params|Object<br/>(associative array)|GET query parameter. For example, when /users/:username/repos, {'sort':'updated'} etc.<br/>default: {}|
+|params|Object<br/>(associative array)|GET query parameter.<br/>For example, when /users/:username/repos, {'sort':'updated'} etc.<br/>default: {}|
 |max|Int|Max page number. If 0, all page.<br/>default: 0|
 |per|Int|Per page number. If 0, api default `per_page`(30).<br/>default: 0|
 
