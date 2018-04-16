@@ -1,7 +1,9 @@
 {
   "name": "fetch-github-api",
-  "version": "1.0.0",
-  "engines": { "node": ">= 8.0.0" },
+  "version": "1.0.1",
+  "engines": {
+    "node": ">= 8.0.0"
+  },
   "description": "Fetch json of all pages for GitHub api",
   "main": "lib/index.js",
   "repository": {
@@ -25,7 +27,8 @@
   },
   "dependencies": {
     "fetch-ponyfill": "^6.0.1",
-    "parse-link-header": "^1.0.1"
+    "parse-link-header": "^1.0.1",
+    "universal-url": "^1.0.0"
   },
   "devDependencies": {
     "ava": "^0.25.0"
