@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/kPherox/fetch-github-api#readme",
   "scripts": {
-    "test": "ava --verbose"
+    "test": "nyc ava --verbose"
   },
   "dependencies": {
     "fetch-ponyfill": "^6.0.1",
@@ -31,6 +31,7 @@
     "universal-url": "^1.0.0"
   },
   "devDependencies": {
-    "ava": "^0.25.0"
+    "ava": "^0.25.0",
+    "nyc": "^11.6.0"
   }
 }
