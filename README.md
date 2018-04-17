@@ -39,15 +39,20 @@ Install from npm.
 ` npm i -s fetch-github-api `
 
 ## How to use
-1. Require.  
-` const FetchGitHubApi = require('fetch-github-api'); `  
-if use ES6 import.  
-` import FetchGitHubApi from 'fetch-github-api' `
-2. Initialize.  
-` let fetchGitHubApi = new FetchGitHubApi('/path/to/endpoint'); `
-3. Fetch json
+Use default export. Default is class. Pass endpoint to import class.
 ```
-// Get Json with then chain
+// import
+import FetchGitHubApi from 'fetch-github-api'
+// or require
+const FetchGitHubApi = require('fetch-github-api');
+
+// Initialize class
+let fetchGitHubApi = new FetchGitHubApi('/path/to/endpoint');
+// Support url query.
+// let fetchGitHubApi = new FetchGitHubApi('/path/to/endpoint', {'per_page': 50});
+// let fetchGitHubApi = new FetchGitHubApi('/path/to/endpoint', {}, 0, 50); // this is equivalent to the above code.
+
+// Fetch json with then chain
 fetchGitHubApi.fetchJson().then(json => {...});
 // or async/await result
 let json = await fetchGitHubApi.fetchJson();
