@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/kPherox/fetch-github-api#readme",
   "scripts": {
-    "test": "nyc ava --verbose"
+    "test": "nyc --reporter=lcov ava --verbose"
   },
   "dependencies": {
     "fetch-ponyfill": "^6.0.1",
