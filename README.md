@@ -31,15 +31,15 @@ Just passing an API endpoint makes it easy to retrieve all the data.
 - Support fetch/promiss/URL browser.
 
 ## Installation
-Install from npm.
+Install from npm.  
 ` npm i -s fetch-github-api `
 
 ## How to use
-1. Require.
-` const FetchGitHubApi = require('fetch-github-api'); `
-if use ES6 import,
-` import FetchGitHubApi = 'fetch-github-api' `
-2. Initialize
+1. Require.  
+` const FetchGitHubApi = require('fetch-github-api'); `  
+if use ES6 import.  
+` import FetchGitHubApi from 'fetch-github-api' `
+2. Initialize.  
 ` let fetchGitHubApi = new FetchGitHubApi('/path/to/endpoint'); `
 3. Fetch json
 ```
