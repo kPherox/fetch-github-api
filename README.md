@@ -3,25 +3,29 @@
 [![npm version][npm-version-badge]][npm-version]
 ![code size][code-size-badge]
 [![Dependencies Status][david-dm-badge]][david-dm]
-[![DevDependencies Status][david-dm-dev-badge]][david-dm-dev]
+[![DevDependencies Status][david-dm-dev-badge]][david-dm-dev]  
+[![Maintainability Status][codeclimate-maintainability-badge]][codeclimate]
+[![Test Coverage Status][codeclimate-coverage-badge]][codeclimate-coverage]
 [![Master Build Status][travis-ci-master-badge]][travis-ci]
 [![Develop Build Status][travis-ci-develop-badge]][travis-ci]
-[![Maintainability Status][codeclimate-maintainability-badge]][codeclimate-maintainability]
 
 [npm-version]: https://www.npmjs.com/package/fetch-github-api
 [david-dm]: https://david-dm.org/kPherox/fetch-github-api
 [david-dm-dev]: https://david-dm.org/kPherox/fetch-github-api?type=dev
 [travis-ci]: https://travis-ci.org/kPherox/fetch-github-api
-[codeclimate-maintainability]: https://codeclimate.com/github/kPherox/fetch-github-api/maintainability
+[codeclimate]: https://codeclimate.com/github/kPherox/fetch-github-api
+[codeclimate-coverage]: https://codeclimate.com/github/kPherox/fetch-github-api/code
 
 [license-badge]: https://img.shields.io/npm/l/fetch-github-api.svg
 [npm-version-badge]: https://img.shields.io/npm/v/fetch-github-api.svg
 [code-size-badge]: https://img.shields.io/github/languages/code-size/kPherox/fetch-github-api.svg
 [david-dm-badge]: https://img.shields.io/david/kPherox/fetch-github-api.svg
 [david-dm-dev-badge]: https://img.shields.io/david/dev/kPherox/fetch-github-api.svg
+
+[codeclimate-maintainability-badge]: https://img.shields.io/codeclimate/maintainability-percentage/kPherox/fetch-github-api.svg
+[codeclimate-coverage-badge]: https://img.shields.io/codeclimate/coverage/kPherox/fetch-github-api.svg
 [travis-ci-master-badge]: https://img.shields.io/travis/kPherox/fetch-github-api/master.svg
 [travis-ci-develop-badge]: https://img.shields.io/travis/kPherox/fetch-github-api/develop.svg?label=develop%20build
-[codeclimate-maintainability-badge]: https://img.shields.io/codeclimate/maintainability-percentage/kPherox/fetch-github-api.svg
 
 Fetch json of all pages for GitHub api.
 Just passing an API endpoint makes it easy to retrieve all the data.
