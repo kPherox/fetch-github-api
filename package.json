@@ -9,7 +9,7 @@
   ],
   "author": "kPherox <admin@mail.kr-kp.com> (https://www.kr-kp.com/)",
   "license": "MIT",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "engines": {
     "node": ">= 8.0.0"
   },
