@@ -1,15 +1,6 @@
 {
   "name": "fetch-github-api",
-  "version": "1.0.1",
-  "engines": {
-    "node": ">= 8.0.0"
-  },
   "description": "Fetch json of all pages for GitHub api",
-  "main": "lib/index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kPherox/fetch-github-api.git"
-  },
   "keywords": [
     "github",
     "api",
@@ -18,19 +9,29 @@
   ],
   "author": "kPherox <admin@mail.kr-kp.com> (https://www.kr-kp.com/)",
   "license": "MIT",
+  "version": "1.0.2",
+  "engines": {
+    "node": ">= 8.0.0"
+  },
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kPherox/fetch-github-api.git"
+  },
   "bugs": {
     "url": "https://github.com/kPherox/fetch-github-api/issues"
   },
   "homepage": "https://github.com/kPherox/fetch-github-api#readme",
-  "scripts": {
-    "test": "ava --verbose"
-  },
   "dependencies": {
     "fetch-ponyfill": "^6.0.1",
     "parse-link-header": "^1.0.1",
     "universal-url": "^1.0.0"
   },
   "devDependencies": {
-    "ava": "^0.25.0"
+    "ava": "^0.25.0",
+    "nyc": "^11.6.0"
+  },
+  "scripts": {
+    "test": "nyc --reporter=lcov ava --verbose"
   }
 }

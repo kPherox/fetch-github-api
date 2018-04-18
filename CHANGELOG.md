@@ -3,6 +3,13 @@ Changelog.
 
 ## [Unreleased]
 
+## [Version 1.0.2][1.0.2] - 2018-04-18
+### Changed
+- Add check integer in constructor parameters.
+
+### Fixed
+- Fix did not fetch multiple pages when last is 19.
+
 ## [Version 1.0.1 (hotfix)][1.0.1] - 2018-04-16
 ### Fixed
 - Fix `URL is not constructor` in browser.  
@@ -13,7 +20,8 @@ However, change module 'url' to 'universal-url' for `URL` and `URLSearchQuery`.
 * Support GET api.
 * Async fetch.
 
-[Unreleased]: https://github.com/kPherox/fetch-github-api/compare/1.0.1...develop
+[Unreleased]: https://github.com/kPherox/fetch-github-api/compare/1.0.2...develop
+[1.0.2]: https://github.com/kPherox/fetch-github-api/compare/1.0.1...1.0.2
 [1.0.1]: https://github.com/kPherox/fetch-github-api/compare/1.0.0...1.0.1
 [1.0.0]: https://github.com/kPherox/fetch-github-api/compare/01dd3c9...1.0.0
 
