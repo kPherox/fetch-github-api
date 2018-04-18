@@ -65,6 +65,6 @@ constructor arguments.
 |:----:|:----:|:-----|
 |endpoint|String|API endpoint.|
 |params|Object<br/>(associative array)|GET query parameter.<br/>For example, when /users/:username/repos, {'sort':'updated'} etc.<br/>default: {}|
-|max|Int|Max page number. If 0, all page.<br/>default: 0|
-|per|Int|Per page number. If 0, api default `per_page`(30).<br/>default: 0|
+|max|Number<br/>(Integer)|Max page number.<br/>0 is all page.<br/>default: 0|
+|per|Number<br/>(Integer)|Per page number.<br/>0 is API default (30). max 100<br/>default: 0|
 
