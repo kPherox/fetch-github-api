@@ -1,5 +1,5 @@
 # fetch-github-api
-[![License][license-badge]](LICENSE)
+[![License][license-badge]][LICENSE]
 [![npm version][npm-version-badge]][npm-version]
 ![code size][code-size-badge]
 [![Dependencies Status][david-dm-badge]][david-dm]
@@ -67,4 +67,14 @@ constructor arguments.
 |params|Object<br/>(associative array)|GET query parameter.<br/>For example, when /users/:username/repos, {'sort':'updated'} etc.<br/>default: {}|
 |max|Number<br/>(Integer)|Max page number.<br/>0 is all page.<br/>default: 0|
 |per|Number<br/>(Integer)|Per page number.<br/>0 is API default (30). max 100<br/>default: 0|
+
+## License
+This software is released under the MIT License.
+See the [LICENSE] file for more information.
+
+### Include packages
+See the [INCLUDE-LICENSE] file for information.
+
+[LICENSE]: LICENSE
+[INCLUDE-LICENSE]: INCLUDE-LICENSE
 
