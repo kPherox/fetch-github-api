@@ -16,45 +16,43 @@
 [codeclimate]: https://codeclimate.com/github/kPherox/fetch-github-api
 [codeclimate-coverage]: https://codeclimate.com/github/kPherox/fetch-github-api/code
 
-[license-badge]: https://img.shields.io/npm/l/fetch-github-api.svg
-[npm-version-badge]: https://img.shields.io/npm/v/fetch-github-api.svg
-[code-size-badge]: https://img.shields.io/github/languages/code-size/kPherox/fetch-github-api.svg
-[david-dm-badge]: https://img.shields.io/david/kPherox/fetch-github-api.svg
-[david-dm-dev-badge]: https://img.shields.io/david/dev/kPherox/fetch-github-api.svg
+[license-badge]: https://img.shields.io/npm/l/fetch-github-api.svg?style=flat-square
+[npm-version-badge]: https://img.shields.io/npm/v/fetch-github-api.svg?style=flat-square
+[code-size-badge]: https://img.shields.io/github/languages/code-size/kPherox/fetch-github-api.svg?style=flat-square
+[david-dm-badge]: https://img.shields.io/david/kPherox/fetch-github-api.svg?style=flat-square
+[david-dm-dev-badge]: https://img.shields.io/david/dev/kPherox/fetch-github-api.svg?style=flat-square
 
-[codeclimate-maintainability-badge]: https://img.shields.io/codeclimate/maintainability-percentage/kPherox/fetch-github-api.svg
-[codeclimate-coverage-badge]: https://img.shields.io/codeclimate/coverage/kPherox/fetch-github-api.svg
-[travis-ci-master-badge]: https://img.shields.io/travis/kPherox/fetch-github-api/master.svg
-[travis-ci-develop-badge]: https://img.shields.io/travis/kPherox/fetch-github-api/develop.svg?label=develop%20build
+[codeclimate-maintainability-badge]: https://img.shields.io/codeclimate/maintainability-percentage/kPherox/fetch-github-api.svg?style=flat-square
+[codeclimate-coverage-badge]: https://img.shields.io/codeclimate/coverage/kPherox/fetch-github-api.svg?style=flat-square
+[travis-ci-master-badge]: https://img.shields.io/travis/kPherox/fetch-github-api/master.svg?style=flat-square
+[travis-ci-develop-badge]: https://img.shields.io/travis/kPherox/fetch-github-api/develop.svg?style=flat-square&label=develop%20build
 
-Fetch json of all pages for GitHub api.
+Fetch json of all pages for GitHub API.
 Just passing an API endpoint makes it easy to retrieve all the data.
 
 ## Requirements
 - Node.js version 8.x or later.
-- Support fetch/promiss/URL browser.
+- Support Promiss/fetch/URL browser.
 
 ## Installation
 Install from npm.  
-` npm i -s fetch-github-api `
+` npm i fetch-github-api `
 
 ## How to use
 Use default export. Default is class. Pass endpoint to import class.
-```
-// import
-import FetchGitHubApi from 'fetch-github-api'
-// or require
+```node
+// Use require, import not test.
 const FetchGitHubApi = require('fetch-github-api');
 
-// Initialize class
+// Initialize class.
 let fetchGitHubApi = new FetchGitHubApi('/path/to/endpoint');
 // Support url query.
 // let fetchGitHubApi = new FetchGitHubApi('/path/to/endpoint', {'per_page': 50});
 // let fetchGitHubApi = new FetchGitHubApi('/path/to/endpoint', {}, 0, 50); // this is equivalent to the above code.
 
-// Fetch json with then chain
+// Fetch json with then chain.
 fetchGitHubApi.fetchJson().then(json => {...});
-// or async/await result
+// or async/await result.
 let json = await fetchGitHubApi.fetchJson();
 ```
 
