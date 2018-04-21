@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/kPherox/fetch-github-api#readme",
   "dependencies": {
+    "base-64": "^0.1.0",
     "fetch-ponyfill": "^6.0.1",
     "parse-link-header": "^1.0.1",
     "universal-url": "^1.0.0"
