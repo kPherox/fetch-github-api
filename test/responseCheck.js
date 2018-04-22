@@ -1,7 +1,7 @@
-'use strict';
-
 import test from 'ava';
 import FetchGitHubApi from '../lib/index';
+import dotenv from 'dotenv';
+dotenv.config();
 
 test('Check access api', async t => {
     let fetchGitHubApi = new FetchGitHubApi('/', {'access_token': process.env.GITHUB_ACCESS_TOKEN});
