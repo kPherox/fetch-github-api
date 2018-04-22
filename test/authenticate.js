@@ -18,3 +18,16 @@ test('Basic authentication', async t => {
     t.is(res.status, 200);
 })
 
+test('OAuth2 token', async t => {
+    let fetchGitHubApi = new FetchGitHubApi('/user');
+
+    fetchGitHubApi.accessToken = process.env.GITHUB_ACCESS_TOKEN;
+
+    let res = await fetchGitHubApi.fetchApi().catch(err => {
+        console.log(err.message);
+        t.fail();
+    });
+
+    t.is(res.status, 200);
+})
+
