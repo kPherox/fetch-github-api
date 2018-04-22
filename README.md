@@ -4,8 +4,8 @@
 ![code size][code-size-badge]
 [![Dependencies Status][david-dm-badge]][david-dm]
 [![DevDependencies Status][david-dm-dev-badge]][david-dm-dev]  
-[![Maintainability Status][codeclimate-maintainability-badge]][codeclimate]
-[![Test Coverage Status][codeclimate-coverage-badge]][codeclimate-coverage]
+[![Maintainability Status][codeclimate-badge]][codeclimate]
+[![Test Coverage Status][codecov-badge]][codecov]
 [![Master Build Status][travis-ci-master-badge]][travis-ci]
 [![Develop Build Status][travis-ci-develop-badge]][travis-ci]
 
@@ -14,7 +14,7 @@
 [david-dm-dev]: https://david-dm.org/kPherox/fetch-github-api?type=dev
 [travis-ci]: https://travis-ci.org/kPherox/fetch-github-api
 [codeclimate]: https://codeclimate.com/github/kPherox/fetch-github-api
-[codeclimate-coverage]: https://codeclimate.com/github/kPherox/fetch-github-api/code
+[codecov]: https://codecov.io/gh/kPherox/fetch-github-api
 
 [license-badge]: https://img.shields.io/npm/l/fetch-github-api.svg?style=flat-square
 [npm-version-badge]: https://img.shields.io/npm/v/fetch-github-api.svg?style=flat-square
@@ -22,8 +22,8 @@
 [david-dm-badge]: https://img.shields.io/david/kPherox/fetch-github-api.svg?style=flat-square
 [david-dm-dev-badge]: https://img.shields.io/david/dev/kPherox/fetch-github-api.svg?style=flat-square
 
-[codeclimate-maintainability-badge]: https://img.shields.io/codeclimate/maintainability-percentage/kPherox/fetch-github-api.svg?style=flat-square
-[codeclimate-coverage-badge]: https://img.shields.io/codeclimate/coverage/kPherox/fetch-github-api.svg?style=flat-square
+[codeclimate-badge]: https://img.shields.io/codeclimate/maintainability-percentage/kPherox/fetch-github-api.svg?style=flat-square
+[codecov-badge]: https://img.shields.io/codecov/c/github/kPherox/fetch-github-api.svg?style=flat-square
 [travis-ci-master-badge]: https://img.shields.io/travis/kPherox/fetch-github-api/master.svg?style=flat-square
 [travis-ci-develop-badge]: https://img.shields.io/travis/kPherox/fetch-github-api/develop.svg?style=flat-square&label=develop%20build
 
