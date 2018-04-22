@@ -66,8 +66,83 @@ constructor arguments.
 |max|Number<br/>(Integer)|Max page number.<br/>0 is all page.<br/>default: 0|
 |per|Number<br/>(Integer)|Per page number.<br/>0 is API default (30). max 100<br/>default: 0|
 
+## Authenticate
+This module supported Basic authenticate & OAuth2 token.
+
+### Use OAuth2 token
+#### Sent as a parameter
+```node
+// Add params option when initialize.
+let fetchGitHubApi = new FetchGitHubApi('/path/to/endpoint', {'access_token': OAUTH-TOKEN});
+
+// or set params property.
+fetchGitHubApi.params = {'access_token': OAUTH-TOKEN};
+```
+
+#### Sent in a header
+```node
+let fetchGitHubApi = new FetchGitHubApi('/path/to/endpoint');
+
+// Set accessToken property.
+fetchGitHubApi.accessToken = OAUTH-TOKEN;
+```
+
+### Use Basic authenticate
+```node
+let fetchGitHubApi = new FetchGitHubApi('/path/to/endpoint');
+
+// Set basicAuth property.
+fetchGitHubApi.basicAuth = "username:password";
+
+// or set username/password property.
+fetchGitHubApi.username = "username";
+fetchGitHubApi.password = "password";
+
+// If two-factor authentication enabled, set totpToken property.
+fetchGitHubApi.totpToken = 123456;
+```
+
+#### Check need totpToken
+```diff
+ // If needs totp token, catch http error
++let checkMustTotp = err => {
++        if (err.name !== 'HTTPStatusError') {
++            throw err;
++        }
++
++        let errMsg = JSON.parse(err.message)
++          , resMsg = errMsg['data']['message'];
++
++        if (resMsg !== 'Must specify two-factor authentication OTP code.') {
++            throw err;
++        }
++
++        // Perform set totpToken property here.
++
++        // if browser, use prompt
++        let result
++          , inputValue = prompt("Please enter OTP code:", "")
++          , value = Number(inputValue);
++        while (Number.isNaN(value)) {
++            inputValue = prompt("Please enter OTP code:", "");
++            value = Number(inputValue);
++            if (!Number.isNaN(value)) {
++                result = value;
++                break;
++            }
++        }
++        fetchGitHubApi.totpToken = result;
++
++        return fetchGitHubApi.fetchJson().catch(checkMustTotp);
++    }
++
+ fetchGitHubApi.fetchJson()
++    .catch(checkMustTotp)
+     .then(json => {...})
+```
+
 ## License
-This software is released under the MIT License.
+This module is released under the MIT License.
 See the [LICENSE] file for more information.
 
 ### Include packages
