@@ -16,8 +16,13 @@ test('Check access api', async t => {
 test('Check http error', async t => {
     let fetchGitHubApi = new FetchGitHubApi('/notfound', {'access_token': process.env.GITHUB_ACCESS_TOKEN});
     let res = await fetchGitHubApi.fetchApi().catch(err => {
-        let errMsg = JSON.parse(err.message);
-        t.is(errMsg['data']['message'], 'Not Found');
+        if (err.name === 'HTTPStatusError') {
+            let errMsg = JSON.parse(err.message);
+            t.is(errMsg['data']['message'], 'Not Found');
+            return;
+        }
+
+        t.fail()
     });
 })
 
