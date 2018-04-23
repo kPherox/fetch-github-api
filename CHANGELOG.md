@@ -2,6 +2,8 @@
 Changelog.
 
 ## [Unreleased]
+
+## [Version 1.1.0][1.1.0] - 2018-04-23
 ### Added
 - Add authorize header.
     - Support OAuth2 token (sent in a header).
@@ -26,7 +28,8 @@ However, change module 'url' to 'universal-url' for `URL` and `URLSearchQuery`.
 * Support GET api.
 * Async fetch.
 
-[Unreleased]: https://github.com/kPherox/fetch-github-api/compare/1.0.2...develop
+[Unreleased]: https://github.com/kPherox/fetch-github-api/compare/1.1.0...develop
+[1.1.0]: https://github.com/kPherox/fetch-github-api/compare/1.0.2...1.1.0
 [1.0.2]: https://github.com/kPherox/fetch-github-api/compare/1.0.1...1.0.2
 [1.0.1]: https://github.com/kPherox/fetch-github-api/compare/1.0.0...1.0.1
 [1.0.0]: https://github.com/kPherox/fetch-github-api/compare/01dd3c9...1.0.0
