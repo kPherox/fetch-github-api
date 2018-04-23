@@ -8,7 +8,7 @@ test('Basic authentication', async t => {
     let fetchGitHubApi = new FetchGitHubApi('/user');
 
     fetchGitHubApi.basicAuth = process.env.GITHUB_BASIC_USER;
-    fetchGitHubApi.totpToken = totpToken();
+    fetchGitHubApi.otpToken = totpToken();
 
     let res = await fetchGitHubApi.fetchApi().catch(err => {
         console.log(err.message);

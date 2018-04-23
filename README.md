@@ -98,14 +98,14 @@ fetchGitHubApi.basicAuth = "username:password";
 fetchGitHubApi.username = "username";
 fetchGitHubApi.password = "password";
 
-// If two-factor authentication enabled, set totpToken property.
-fetchGitHubApi.totpToken = 123456;
+// If two-factor authentication enabled, set otpToken property.
+fetchGitHubApi.otpToken = 123456;
 ```
 
-#### Check need totpToken
+#### Check must OTP code
 ```diff
- // If needs totp token, catch http error
-+let checkMustTotp = err => {
+ // If must OTP code, catch http error
++let checkMustOtpCode = err => {
 +        if (err.name !== 'HTTPStatusError') {
 +            throw err;
 +        }
@@ -117,7 +117,7 @@ fetchGitHubApi.totpToken = 123456;
 +            throw err;
 +        }
 +
-+        // Perform set totpToken property here.
++        // Perform set otpToken property here.
 +
 +        // if browser, use prompt
 +        let result
@@ -131,13 +131,13 @@ fetchGitHubApi.totpToken = 123456;
 +                break;
 +            }
 +        }
-+        fetchGitHubApi.totpToken = result;
++        fetchGitHubApi.otpToken = result;
 +
-+        return fetchGitHubApi.fetchJson().catch(checkMustTotp);
++        return fetchGitHubApi.fetchJson().catch(checkMustOtpCode);
 +    }
 +
  fetchGitHubApi.fetchJson()
-+    .catch(checkMustTotp)
++    .catch(checkMustOtpCode)
      .then(json => {...})
 ```
 
