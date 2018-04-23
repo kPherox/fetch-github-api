@@ -2,6 +2,12 @@
 Changelog.
 
 ## [Unreleased]
+### Added
+- Add authorize header.
+    - Support OAuth2 token (sent in a header).
+    - Support Basic authenticate.
+- Add x-github-otp header.
+    - Support Two-Factor Authorize when basic authenticate.
 
 ## [Version 1.0.2][1.0.2] - 2018-04-18
 ### Changed
