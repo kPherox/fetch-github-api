@@ -120,16 +120,11 @@ fetchGitHubApi.otpToken = 123456;
 +        // Perform set otpToken property here.
 +
 +        // if browser, use prompt
-+        let result
-+          , inputValue = prompt("Please enter OTP code:", "")
-+          , value = Number(inputValue);
-+        while (Number.isNaN(value)) {
++        let inputValue = prompt("Please enter OTP code:", "")
++          , result = Number(inputValue);
++        while (Number.isNaN(result)) {
 +            inputValue = prompt("Please enter OTP code:", "");
-+            value = Number(inputValue);
-+            if (!Number.isNaN(value)) {
-+                result = value;
-+                break;
-+            }
++            result = Number(inputValue);
 +        }
 +        fetchGitHubApi.otpToken = result;
 +
